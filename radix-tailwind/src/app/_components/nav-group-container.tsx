@@ -10,7 +10,7 @@ export function NavGroupContainer({ title, icon, children }: Props) {
         {icon}
         {title}
       </div>
-      <div className="pl-2 mt-2">{children}</div>
+      <div className="pl-1 mt-2">{children}</div>
     </div>
   );
 }

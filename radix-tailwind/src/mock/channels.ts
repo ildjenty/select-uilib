@@ -17,6 +17,10 @@ export const channels: Channel[] = [
     isPublic: false,
   },
   {
+    id: "CS",
+    isPublic: true,
+  },
+  {
     id: "dev",
     isPublic: true,
   },
@@ -35,6 +39,10 @@ export const channels: Channel[] = [
   {
     id: "project-summit-solutions",
     isPublic: false,
+  },
+  {
+    id: "random",
+    isPublic: true,
   },
   {
     id: "bot-notifications",

@@ -72,7 +72,7 @@ export default function Layout({
               ))}
             </NavGroupContainer>
           </nav>
-          <div className="grow p-4">{children}</div>
+          <div className="grow">{children}</div>
         </div>
       </body>
     </html>

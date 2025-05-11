@@ -1,19 +1,19 @@
 "use client";
 
 import * as React from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import * as Primitive from "@radix-ui/react-dropdown-menu";
 import { cn } from "@/utils/class-name";
 
-const Root = DropdownMenu.Root;
+const DropdownMenu = Primitive.Root;
 
-const Trigger = DropdownMenu.Trigger;
+const DropdownMenuTrigger = Primitive.Trigger;
 
-const Content = React.forwardRef<
-  Omit<React.ComponentRef<typeof DropdownMenu.Content>, "sideOffset">,
-  React.ComponentPropsWithoutRef<typeof DropdownMenu.Content>
+const DropdownMenuContent = React.forwardRef<
+  Omit<React.ComponentRef<typeof Primitive.Content>, "sideOffset">,
+  React.ComponentPropsWithoutRef<typeof Primitive.Content>
 >(({ className, ...props }, ref) => (
-  <DropdownMenu.Portal>
-    <DropdownMenu.Content
+  <Primitive.Portal>
+    <Primitive.Content
       ref={ref}
       {...props}
       sideOffset={4}
@@ -32,15 +32,15 @@ const Content = React.forwardRef<
         "origin-[--radix-dropdown-menu-content-transform-origin]"
       )}
     />
-  </DropdownMenu.Portal>
+  </Primitive.Portal>
 ));
-Content.displayName = "DropdownMenu.Content";
+DropdownMenuContent.displayName = "Primitive.Content";
 
-const Item = React.forwardRef<
-  React.ComponentRef<typeof DropdownMenu.Item>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenu.Item>
+const DropdownMenuItem = React.forwardRef<
+  React.ComponentRef<typeof Primitive.Item>,
+  React.ComponentPropsWithoutRef<typeof Primitive.Item>
 >(({ className, ...props }, ref) => (
-  <DropdownMenu.Item
+  <Primitive.Item
     ref={ref}
     className={cn(
       "flex items-center gap-2 px-2 py-1.5 text-sm focus:bg-accent focus:text-accent-foreground",
@@ -51,6 +51,11 @@ const Item = React.forwardRef<
     {...props}
   />
 ));
-Item.displayName = "DropdownMenu.Item";
+DropdownMenuItem.displayName = "Primitive.Item";
 
-export { Root, Trigger, Content, Item };
+export {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+};

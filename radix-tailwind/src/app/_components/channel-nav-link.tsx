@@ -6,7 +6,7 @@ import { NavLink } from "@/components/nav-link";
 export function ChannelNavLink({ channel }: { channel: Channel }) {
   const Icon = channel.isPublic ? RssIcon : LockIcon;
   return (
-    <NavLink href={`/channels/${channel.id}`}>
+    <NavLink href={`/channels/${channel.id}`} className="text-nowrap">
       <Icon size={16} />
       {channel.id}
     </NavLink>

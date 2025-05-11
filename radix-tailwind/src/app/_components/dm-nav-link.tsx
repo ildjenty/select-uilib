@@ -4,7 +4,7 @@ import { Avatar } from "@/components/avatar";
 
 export function DMNavLink({ user }: { user: User }) {
   return (
-    <NavLink href={`/dm/${user.id}`}>
+    <NavLink href={`/dm/${user.id}`} className="text-nowrap">
       <Avatar
         src={user.avatarSrc}
         alt={user.name}

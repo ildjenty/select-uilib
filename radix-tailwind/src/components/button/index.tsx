@@ -49,7 +49,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
       <Comp
         className={cn(
           className,
-          "inline-flex items-center justify-center gap-2",
+          "inline-flex items-center justify-center gap-1",
           "rounded-md border text-sm",
           "transition-all cursor-pointer",
           "disabled:pointer-events-none disabled:opacity-50",

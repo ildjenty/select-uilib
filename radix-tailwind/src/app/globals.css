@@ -67,8 +67,6 @@ body {
 
 a,
 button,
-input,
-select,
-textarea {
+select {
   @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary;
 }

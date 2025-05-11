@@ -21,7 +21,7 @@ type Props = {
 
 export function Avatar({ src, alt, size = 24, online, className }: Props) {
   return (
-    <div className={cn(className, "relative")}>
+    <span className={cn(className, "relative rounded-md")}>
       <Image
         src={src}
         alt={alt}
@@ -30,6 +30,6 @@ export function Avatar({ src, alt, size = 24, online, className }: Props) {
         height={size}
       />
       {online !== undefined && <OnlineIndicator online={online} />}
-    </div>
+    </span>
   );
 }
