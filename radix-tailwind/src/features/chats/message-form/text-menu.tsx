@@ -37,7 +37,7 @@ type Props = {
 
 export function TextMenu({ focus }: Props) {
   return (
-    <div className={`flex gap-1 ${focus ? "" : "brightness-75"}`}>
+    <div className={`flex gap-1 ${focus ? "" : "brightness-50"}`}>
       {items.map((item) => (
         <MenuItem focus={focus} key={item.action}>
           {item.icon}

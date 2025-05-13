@@ -7,7 +7,7 @@ import {
   MessageItem,
   ThreadLayout,
   ThreadSeparator,
-} from "@/features/chat";
+} from "@/features/chats";
 import { users } from "@/mock/users";
 import { threads } from "@/mock/chat";
 
@@ -46,7 +46,7 @@ export function MessagesContent() {
             {thread.replies.map((reply) => (
               <MessageItem
                 key={reply.id}
-                thread={thread}
+                thread={{ ...reply, replies: [] }}
                 mode="reply"
                 openThread={(id) => setOpenThreadId(id)}
               />

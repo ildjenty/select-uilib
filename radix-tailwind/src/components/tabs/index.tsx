@@ -34,7 +34,7 @@ const TabsTrigger = forwardRef<
       className,
       "inline-flex items-center justify-center px-3 py-1.5 gap-1 transition-all translate-y-[1px] border-b border-transparent",
       "text-muted text-sm font-semibold whitespace-nowrap cursor-pointer",
-      "hover:bg-accent disabled:pointer-events-none disabled:opacity-50",
+      "hover:bg-accent hover:border-border disabled:pointer-events-none disabled:opacity-50",
       "data-[state=active]:bg-active data-[state=active]:text-primary data-[state=active]:border-primary"
     )}
     {...props}
@@ -50,7 +50,7 @@ const TabsContent = forwardRef<
     ref={ref}
     className={cn(
       className,
-      "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
+      "w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary"
     )}
     {...props}
   />

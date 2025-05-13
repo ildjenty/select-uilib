@@ -1,6 +1,6 @@
 import { Avatar } from "@/components/avatar";
 
-import { MessageItemData } from "@/features/chat/types";
+import { MessageItemData } from "./types";
 import { RepliesSignifier } from "./replies-signifier";
 
 type Props = MessageItemData & {

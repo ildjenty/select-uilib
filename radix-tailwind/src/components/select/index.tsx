@@ -39,7 +39,7 @@ const SelectContent = forwardRef<
     <Primitive.Content
       ref={ref}
       className={cn(
-        "relative z-50 max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden ",
+        "relative z-50 max-h-[--radix-select-content-available-height] min-w-[var(--radix-select-trigger-width)] overflow-y-auto overflow-x-hidden ",
         "rounded-md border border-border bg-popover shadow-md",
         "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
@@ -68,7 +68,7 @@ const SelectItem = forwardRef<
     ref={ref}
     className={cn(
       "relative flex w-full items-center rounded-sm py-1.5 pl-2 pr-8",
-      "cursor-default select-none text-sm outline-none",
+      "select-none text-sm outline-none cursor-pointer",
       "focus:bg-accent focus:text-accent-foreground",
       "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className

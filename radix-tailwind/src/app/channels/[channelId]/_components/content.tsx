@@ -25,7 +25,7 @@ export function Content({
   return (
     <Tabs
       defaultValue={tab}
-      className="w-full h-full flex flex-col min-h-0 grow-1"
+      className="max-w-full h-full flex flex-col min-h-0 grow-1"
     >
       <TabsList>
         <Link href={`/channels/${channelId}?tab=messages`}>

@@ -34,7 +34,7 @@ export default function Layout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-lvh`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-lvh w-lvw`}
       >
         <header className="border-b border-border p-3 flex items-center justify-between">
           <Link href="/" className="font-bold text-lg">
@@ -56,7 +56,7 @@ export default function Layout({
             </Button>
           </div>
         </header>
-        <div className="flex min-h-0 grow">
+        <div className="flex min-h-0 grow-1 w-full">
           <nav className="p-4 border-r border-border space-y-4">
             <NavGroupContainer title="Channels" icon={<BoxesIcon size={18} />}>
               {channels.map((channel) => (
@@ -72,7 +72,7 @@ export default function Layout({
               ))}
             </NavGroupContainer>
           </nav>
-          <div className="grow">{children}</div>
+          <div className="min-w-0 grow-1">{children}</div>
         </div>
       </body>
     </html>

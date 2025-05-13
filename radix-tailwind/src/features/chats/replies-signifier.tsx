@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from "lucide-react";
 
 import { Avatar } from "@/components/avatar";
-import { MessageItemData } from "@/features/chat/types";
+import { MessageItemData } from "./types";
 
 export function RepliesSignifier({
   threadId,

@@ -48,14 +48,14 @@ const Button = forwardRef<HTMLButtonElement, Props>(
     return (
       <Comp
         className={cn(
+          corners[corner],
           className,
           "inline-flex items-center justify-center gap-1",
-          "rounded-md border text-sm",
+          "border text-sm",
           "transition-all cursor-pointer",
           "disabled:pointer-events-none disabled:opacity-50",
           modes[mode],
-          sizes[size],
-          corners[corner]
+          sizes[size]
         )}
         ref={ref}
         {...props}

@@ -49,6 +49,7 @@
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
   --color-muted: var(--muted);
+  --color-auxiliary: var(--auxiliary);
   --color-active: var(--active);
   --color-accent: var(--accent);
   --color-popover: var(--popover);
@@ -67,6 +68,7 @@ body {
 
 a,
 button,
+input,
 select {
   @apply focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary;
 }
