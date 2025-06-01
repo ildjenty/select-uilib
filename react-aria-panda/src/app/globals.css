@@ -1,26 +1,43 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --primary: oklch(0.55 0.1066 228.5);
+  --primary-foreground: oklch(1 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.27 0.016 264.26);
+  --surface: oklch(0.94 0.0042 271.37);
+  --muted: oklch(0.52 0.037 265.87);
+  --auxiliary: oklch(0.8 0.0042 271.37);
+  --active: oklch(0.97 0.0209 227.52);
+  --accent: oklch(0.97 0.0013 286.38);
+  --popover: oklch(1 0 0);
+  --border: oklch(0.89 0.0111 274.88);
+  --success: oklch(0.71 0.23505 143.1565);
+  --success-foreground: oklch(1 0 0);
+  --warning: oklch(0.82 0.1602 75.97);
+  --warning-foreground: oklch(0.27 0.016 264.26);
+  --destructive: oklch(0.67 0.2146 25.04);
+  --destructive-foreground: oklch(1 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary: oklch(0.7 0.1039 214.63);
+    --primary-foreground: oklch(1 0 0);
+    --background: oklch(0.27 0.016 264.26);
+    --foreground: oklch(1 0 0);
+    --surface: oklch(0.35 0.0209 262.59);
+    --muted: oklch(0.71 0.0278 266.52);
+    --auxiliary: oklch(0.5 0.0278 266.52);
+    --active: oklch(0.32 0.0263 244.26);
+    --accent: oklch(0.41 0 0);
+    --popover: oklch(0.21 0.0104 268.19);
+    --border: oklch(0.4 0.027 265.44);
+    --success: oklch(0.6 0.1983 143.28);
+    --success-foreground: oklch(1 0 0);
+    --warning: oklch(0.78 0.1573 91.38);
+    --warning-foreground: oklch(0.21 0.0104 268.19);
+    --destructive: oklch(0.6 0.2267 28.62);
+    --destructive-foreground: oklch(1 0 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer reset, base, tokens, recipes, utilities;

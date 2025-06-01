@@ -8,7 +8,7 @@ export function BaseTaskRow({
     <div
       className={cn(
         className,
-        "min-w-full grid grid-cols-[25rem_12rem_8rem_8rem_8rem_8rem_20rem]"
+        "min-w-full grid grid-cols-[30rem_12rem_8rem_8rem_8rem_8rem_20rem]"
       )}
     >
       {children}
