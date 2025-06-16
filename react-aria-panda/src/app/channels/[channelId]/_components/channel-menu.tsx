@@ -9,7 +9,6 @@ import {
 import { Button } from "@/components/button";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/dropdown-menu";
@@ -17,12 +16,10 @@ import {
 export function ChannelMenu() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button size="icon" mode="default">
-          <EllipsisVerticalIcon size={18} />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <Button slot="trigger" mode="default" size="icon">
+        <EllipsisVerticalIcon size={18} />
+      </Button>
+      <DropdownMenuContent>
         <DropdownMenuItem>
           <SquareArrowOutUpRightIcon size={16} />
           Open as new tab

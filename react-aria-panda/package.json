@@ -1,5 +1,5 @@
 {
-  "name": "react-aria-tailwind",
+  "name": "react-aria-panda",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.513.0",
     "next": "15.2.1",
     "react": "^19.0.0",
+    "react-aria-components": "^1.10.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

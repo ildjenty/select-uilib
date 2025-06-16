@@ -10,11 +10,11 @@ export function MembersIndicator({ members }: Props) {
   const count = members.length;
   const firstThreeMembers = members.slice(0, 5);
   const posClasses = [
-    "left-1 z-[5]",
-    "left-6 z-[4]",
-    "left-11 z-[3]",
-    "left-17 z-[2]",
-    "left-23 z-[1]",
+    "left-[4px] z-[5]",
+    "left-[24px] z-[4]",
+    "left-[44px] z-[3]",
+    "left-[64px] z-[2]",
+    "left-[84px] z-[1]",
   ];
 
   return (
