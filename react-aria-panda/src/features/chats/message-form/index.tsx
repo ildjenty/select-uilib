@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { useFocusWithin } from "react-aria";
 import { SendHorizonalIcon } from "lucide-react";
 
 import { css } from "@/styled-system/css";
@@ -11,11 +12,11 @@ import { AttachMenu } from "./attache-menu";
 
 export function MessageForm() {
   const [focus, setFocus] = useState(false);
-  const ref = useRef<HTMLTextAreaElement>(null);
-  const focusHandler = () => {
-    ref.current?.focus();
-    setFocus(true);
-  };
+  const { focusWithinProps } = useFocusWithin({
+    onFocusWithinChange: (isFocused) => {
+      setFocus(isFocused);
+    },
+  });
 
   return (
     <div
@@ -32,9 +33,7 @@ export function MessageForm() {
           ringColor: "primary",
         },
       })}
-      tabIndex={0}
-      onClick={focusHandler}
-      onFocus={focusHandler}
+      {...focusWithinProps}
     >
       <TextMenu focus={focus} />
       <textarea
@@ -48,9 +47,6 @@ export function MessageForm() {
           },
         })}
         rows={1}
-        onFocus={() => setFocus(true)}
-        onBlur={() => setFocus(false)}
-        ref={ref}
       />
       <div className={hstack({ justifyContent: "space-between" })}>
         <AttachMenu />
